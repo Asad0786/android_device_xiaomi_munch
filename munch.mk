@@ -9,14 +9,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common lineage stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/proton/config/common.mk)
 
 # Inherit from device makefile
 $(call inherit-product, device/xiaomi/munch/device.mk)
+PROTON_BUILD_VARIANT := OFFICIAL
 
-DEVICE_MAINTAINER := madmax7896
-
-PRODUCT_NAME := arrow_munch
+PRODUCT_NAME := munch
 PRODUCT_DEVICE := munch
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
